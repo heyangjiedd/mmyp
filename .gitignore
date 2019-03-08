@@ -1,0 +1,7 @@
+*.xlsx
+node_modules
+pack
+build/bundle.js
+build/index.css
+note.txt
+.idea

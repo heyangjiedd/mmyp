@@ -1,0 +1,50 @@
+@mobile-md-width: 375px;
+@tablet-width: 769px;
+@base-font: 28px;
+@header-height: 88px;
+@taskbar-height: 98px;
+@layout-padding: 50px;
+@scale: "@3X";
+
+.background-picture-cover() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.background-picture-contain() {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.padding-header-taskbar() {
+  padding-top: unit(@header-height / @base-font, rem);
+  padding-bottom: unit(@taskbar-height / @base-font, rem);
+}
+
+.Content() {
+  padding-top: unit(@header-height / @base-font, rem);
+  background-color: #F8F8F8;
+  min-height: 100vh;
+  padding-bottom: unit(@taskbar-height / @base-font , rem);
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.lines(@n) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @n;
+  -webkit-box-orient: vertical;
+}
